@@ -1,0 +1,90 @@
+/* ===================================== 
+    Base Style
+======================================== */
+*{
+    box-sizing: border-box;
+    
+}
+body{
+    font-family: 'Crimson Text', serif;
+    margin: auto; 
+    
+}
+/* ===================================== 
+   Grid Layout
+======================================== */
+
+
+.grid {
+    
+    &-container {
+        display: grid; 
+        height: 100vh; 
+        grid-template-columns: 100%;
+        grid-template-rows: auto;   
+        grid-template-areas: 
+            "header"
+            "nav"
+            "main"
+    }
+    
+}
+
+header {
+    grid-area: header; 
+        
+}
+
+nav {
+    grid-area: nav; 
+}
+
+main {
+    grid-area: main; 
+}
+
+/* ===================================== 
+  Header
+======================================== */
+
+header{
+    display: flex; 
+    justify-content: space-around;
+    background-color: #7477BF;
+    color: #fff; 
+    padding: 0 5px; 
+    
+     
+}
+
+.wrapper-ava{
+    display: flex; 
+    border-left: 1px solid #fff; 
+     
+}
+h2{
+   flex-grow: 10;
+}
+
+#icon-bell{
+    margin-right: 15px; 
+}
+
+#avatar{ 
+    margin-top: 10px; 
+    margin-left: 2px; 
+    margin-right: 5px;    
+}
+
+/* ===================================== 
+  Navigation
+======================================== */
+
+nav {
+    display: flex;
+    background-color: #4D4C72;
+    justify-content: center;
+    a{
+       padding: 10px 10px;
+    }
+}
