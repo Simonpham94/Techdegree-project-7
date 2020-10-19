@@ -368,12 +368,14 @@ body {
 /* ===================================== 
    Grid Layout
 ======================================== */
-.grid-container {
+.grid-main-container {
   display: grid;
   height: 100vh;
   grid-template-columns: 100%;
   grid-template-rows: auto;
   grid-template-areas: "header" "nav" "main";
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 header {
@@ -433,5 +435,42 @@ nav a {
 /* ===================================== 
  Main header
 ======================================== */
+.main-header {
+  display: flex;
+  align-items: center;
+  height: 25%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.main-header h2 {
+  flex-grow: 1;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.main-header-search {
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-bottom-left-radius: 5px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  margin-top: 0;
+  margin-bottom: 0;
+  flex-grow: 10;
+  background-color: silver;
+}
+.main-header-search input {
+  margin-left: 50px;
+}
+
+/* ===================================== 
+ Alert box
+======================================== */
+.alert {
+  border: 1px solid black;
+  border-radius: 3px;
+}
 
 /*# sourceMappingURL=styles.css.map */
