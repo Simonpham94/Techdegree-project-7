@@ -374,8 +374,6 @@ body {
   grid-template-columns: 100%;
   grid-template-rows: auto;
   grid-template-areas: "header" "nav" "main";
-  padding-left: 5px;
-  padding-right: 5px;
 }
 
 header {
@@ -460,9 +458,7 @@ nav a {
   margin-bottom: 0;
   flex-grow: 10;
   background-color: silver;
-}
-.main-header-search input {
-  margin-left: 50px;
+  text-align: right;
 }
 
 /* ===================================== 
