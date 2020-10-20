@@ -3,15 +3,27 @@
 #icon-dashboard, 
 #icon-settings, 
 #icon-members, 
-#icon-visits{
+#icon-visits, {
     width: 25px; 
+}
+
+#icon-twitter {
+    width: 35px; 
+}
+
+.social-image{   
+    width: 60px; 
+    height: 60px; 
+    // border-radius: 50%; 
+    border: 1px solid black; 
+   transform-origin: center;   
 }
 
 /* =======Images===== */
 
 #avatar{
-    height: 10%; 
-    width: 10%; 
+    height: 50px; 
+    width: 50px; 
     border-radius: 50%;
 }
 
