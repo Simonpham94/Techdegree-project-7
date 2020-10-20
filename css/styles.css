@@ -31,6 +31,87 @@
   border-radius: 50%;
 }
 
+/* =======Toggle Switches===== */
+.onoffswitch {
+  position: relative;
+  width: 90px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.onoffswitch-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #999999;
+  border-radius: 20px;
+}
+
+.onoffswitch-inner {
+  display: block;
+  width: 200%;
+  margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+  display: block;
+  float: left;
+  width: 50%;
+  height: 30px;
+  padding: 0;
+  line-height: 30px;
+  font-size: 14px;
+  color: white;
+  font-family: Trebuchet, Arial, sans-serif;
+  font-weight: bold;
+  box-sizing: border-box;
+}
+
+.onoffswitch-inner:before {
+  content: "ON";
+  padding-left: 10px;
+  background-color: #34A7C1;
+  color: #FFFFFF;
+}
+
+.onoffswitch-inner:after {
+  content: "OFF";
+  padding-right: 10px;
+  background-color: #EEEEEE;
+  color: #999999;
+  text-align: right;
+}
+
+.onoffswitch-switch {
+  display: block;
+  width: 18px;
+  margin: 6px;
+  background: #FFFFFF;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 56px;
+  border: 2px solid #999999;
+  border-radius: 20px;
+  transition: all 0.3s ease-in 0s;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -383,7 +464,9 @@ body {
 }
 
 .traffic-header,
-.daily {
+.daily,
+.message,
+.settings {
   margin-left: auto;
   margin-right: auto;
   width: 95%;
@@ -392,6 +475,12 @@ body {
 a {
   text-decoration: none;
   color: #7377BF;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 0.8em;
 }
 
 /* ===================================== 
@@ -492,6 +581,7 @@ nav a {
 }
 .main-header-search input {
   margin-right: 10px;
+  padding-left: 10px;
 }
 
 /* ===================================== 
@@ -558,7 +648,7 @@ nav a {
 }
 
 /* ===================================== 
- New Members
+ New Members & Recent Activity
 ======================================== */
 .profile-image {
   width: 45px;
@@ -567,25 +657,81 @@ nav a {
 }
 
 .members-container {
-  display: flex;
-  align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: 5px;
-  padding-bottom: 10px;
 }
 .members-container p {
   margin: 0;
 }
 
-.members-container:not(:last-child) {
+.activity-container p {
+  margin: 0 0 0 25px;
+}
+
+.members-container,
+.activity-container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+}
+.members-container p,
+.activity-container p {
+  font-size: 0.85em;
+}
+
+.members-container:not(:last-child),
+.activity-container:not(:last-child) {
   border-bottom: 1px solid silver;
 }
 
-.members {
+.members,
+.activity {
   margin-top: 20px;
   border: 1px solid silver;
   padding-left: 5px;
   padding-right: 5px;
+}
+
+.members-text {
+  flex-basis: 60%;
+  font-size: 0.85em;
+}
+
+.activity-text {
+  font-size: 0.85em;
+  justify-content: space-around;
+}
+
+/* ===================================== 
+ Message User & Settings
+======================================== */
+.message input,
+.message textarea {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  background-color: #FBFBFB;
+}
+.message input,
+.message textarea,
+.message button {
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid silver;
+  font-size: 0.9em;
+}
+.message input {
+  height: 30px;
+}
+.message textarea {
+  height: 80px;
+}
+.message button {
+  background-color: #7377BF;
+  color: #fff;
+  text-transform: uppercase;
+  height: 30px;
 }
 
 /*# sourceMappingURL=styles.css.map */

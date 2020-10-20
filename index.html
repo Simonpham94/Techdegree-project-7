@@ -138,7 +138,7 @@
 
             <!-- new members widget -->
             <section class="members">
-                <h3>NEW MEMBERS</h3>
+                <h3>New members</h3>
 
                 <div class="members-container">
                     <img src="web_app_dashboard_v3.1/images/member-1.jpg" class="profile-image" alt="New members">
@@ -179,21 +179,47 @@
 
             <!-- recent activity widget -->
             <section class="activity">
-                <h3>RECENT ACTIVITY</h3>
+                <h3>Recent activity</h3>
 
                 <div class="activity-container">
-                    <img src="images/Sept2018Profile.jpg" class="profile-image" alt="Recent activity">
-                    <div class="members-text">
-                        <p>Victoria Chambers</p>
-                        <a href="#">victoria.chambers800@example.com</a>
-                        <p>10/15/15</p>
+                    <img src="web_app_dashboard_v3.1/images/member-1.jpg" class="profile-image" alt="Recent activity">
+                    <div class="activity-text">
+                        <p>Victoria Chambers commented on YourApp's SEO tips</p>
+                        <p>4 hours ago</p>
+                    </div>
+                    
+                </div>
+
+                <div class="activity-container">
+                    <img src="web_app_dashboard_v3.1/images/member-2.jpg" class="profile-image" alt="Recent activity">
+                    <div class="activity-text">
+                        <p>Dale Byrd likes the post Facebook's changes for 2016</p>
+                        <p>5 hours ago</p>
+                    </div>
+                    
+                </div>
+
+                <div class="activity-container">
+                    <img src="web_app_dashboard_v3.1/images/member-3.jpg" class="profile-image" alt="Recent activity">
+                    <div class="activity-text">
+                        <p>Dawn Wood commented on Facebook's changes for 2016</p>
+                        <p>5 hours ago</p>
+                    </div>
+                    
+                </div>
+
+                <div class="activity-container">
+                    <img src="web_app_dashboard_v3.1/images/member-4.jpg" class="profile-image" alt="Recent activity">
+                    <div class="activity-text">
+                        <p>Dan Oliver posted YourApp's SEO tips</p>
+                        <p>1 day ago</p>
                     </div>
                     
                 </div>
             </section>
             
             <section class="message">
-                <h3>Message User</h3>
+                <h3>Message user</h3>
 
                 <form class="wudget-container">
                     <input type="text" placeholder="Search for user" class="form-field" id="userField">
@@ -206,9 +232,14 @@
             <section class="settings">
                 <h3>Settings</h3>
 
-                <!-- custom CSS toggle code-->
-                <!-- custom CSS toggle code-->
-
+                <div class="onoffswitch">
+                    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0" checked>
+                    <label class="onoffswitch-label" for="myonoffswitch">
+                        <span class="onoffswitch-inner"></span>
+                        <span class="onoffswitch-switch"></span>
+                    </label>
+                </div>
+                
                 <select class="form-field" id="timezone">
                     <option disabled selected>Select a Timezone</option>
                     <option>Eastern</option>

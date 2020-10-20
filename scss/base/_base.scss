@@ -12,7 +12,9 @@ body{
 }
 
 .traffic-header, 
-.daily, {
+.daily,
+.message, 
+.settings {
     margin-left: auto; 
     margin-right: auto; 
     width: 95%;  
@@ -21,6 +23,12 @@ body{
 a{
     text-decoration: none; 
     color: #7377BF; 
+}
+
+h3{
+    text-transform: uppercase;
+    font-weight: 100; 
+    font-size: .8em; 
 }
 
 
@@ -65,11 +73,6 @@ header{
     background-color: #7477BF;
     color: #fff; 
     padding: 15px 15px; 
-
-    // &> * {
-    //     padding-top: 5px; 
-    //     padding-bottom: 5px; 
-    // }
         
 }
 
@@ -120,8 +123,7 @@ nav {
     margin-top: 0; 
     margin-bottom: 0; 
 
-    h2{
-       
+    h2{     
         flex-grow: 1; 
         padding-top: 15px; 
         padding-bottom: 15px; 
@@ -143,9 +145,11 @@ nav {
     flex-grow: 10; 
     background-color: silver; 
     text-align: right; 
+    
 
     input{
         margin-right: 10px; 
+        padding-left: 10px;
     }
     
 }
@@ -227,7 +231,7 @@ nav {
 }
 
 /* ===================================== 
- New Members
+ New Members & Recent Activity
 ======================================== */
 
 .profile-image {
@@ -236,23 +240,37 @@ nav {
     border-radius: 50%; 
 }
 
-.members-container {
-    display: flex; 
-    align-items: flex-start; 
+.members-container{
     justify-content: space-between;
-    margin-bottom: 5px; 
-    padding-bottom: 10px; 
-
-    p{
+    p {
         margin: 0; 
     }
 }
 
-.members-container:not(:last-child) {
+.activity-container {
+    p{
+        margin: 0 0 0 25px; 
+    }
+}
+
+.members-container, 
+.activity-container {
+    display: flex; 
+    align-items: flex-start; 
+    margin-bottom: 5px; 
+    padding-bottom: 10px; 
+    p{ 
+        font-size: .85em;
+    }
+}
+
+.members-container:not(:last-child), 
+.activity-container:not(:last-child) {
     border-bottom: 1px solid silver; 
 }
 
-.members{
+.members, 
+.activity{
     margin-top: 20px; 
     border: 1px solid silver; 
     padding-left: 5px;  
@@ -260,6 +278,49 @@ nav {
 }
 
 .members-text {
-
+    flex-basis: 60%;
+    font-size: .85em;
 }
 
+.activity-text {
+    font-size: .85em;
+    justify-content: space-around;  
+}
+
+/* ===================================== 
+ Message User & Settings
+======================================== */
+.message {
+    input, 
+    textarea{
+    display: block; 
+    margin-top: 10px; 
+    margin-bottom: 10px; 
+    padding-left: 10px; 
+    background-color: #FBFBFB;
+    }
+
+    input, 
+    textarea, 
+    button{
+        width: 100%; 
+        border-radius: 3px; 
+        border: 1px solid silver;  
+        font-size: .9em; 
+    }
+
+    input{
+        height: 30px; 
+    }
+
+    textarea {
+        height: 80px; 
+    }
+
+    button{
+        background-color: #7377BF; 
+        color: #fff; 
+        text-transform: uppercase; 
+        height: 30px; 
+    }
+}
