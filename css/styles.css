@@ -34,7 +34,7 @@
 /* =======Toggle Switches===== */
 .onoffswitch {
   position: relative;
-  width: 90px;
+  width: 73px;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -65,10 +65,10 @@
   display: block;
   float: left;
   width: 50%;
-  height: 30px;
+  height: 23px;
   padding: 0;
-  line-height: 30px;
-  font-size: 14px;
+  line-height: 23px;
+  font-size: 12px;
   color: white;
   font-family: Trebuchet, Arial, sans-serif;
   font-weight: bold;
@@ -78,7 +78,7 @@
 .onoffswitch-inner:before {
   content: "ON";
   padding-left: 10px;
-  background-color: #34A7C1;
+  background-color: #7377BF;
   color: #FFFFFF;
 }
 
@@ -92,13 +92,13 @@
 
 .onoffswitch-switch {
   display: block;
-  width: 18px;
-  margin: 6px;
+  width: 17px;
+  margin: 4px;
   background: #FFFFFF;
   position: absolute;
   top: 0;
   bottom: 0;
-  right: 56px;
+  right: 46px;
   border: 2px solid #999999;
   border-radius: 20px;
   transition: all 0.3s ease-in 0s;
@@ -732,6 +732,11 @@ nav a {
   color: #fff;
   text-transform: uppercase;
   height: 30px;
+}
+
+.toggle-wrapper {
+  border: 1px solid black;
+  height: 70px;
 }
 
 /*# sourceMappingURL=styles.css.map */
