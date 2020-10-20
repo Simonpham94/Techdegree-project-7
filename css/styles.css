@@ -7,16 +7,21 @@
   width: 25px;
 }
 
-#icon-twitter {
-  width: 35px;
+#icon-tw,
+#icon-fb,
+#icon-gg {
+  width: 30px;
+  height: auto;
+  fill: #fff;
 }
 
 .social-image {
   width: 60px;
   height: 60px;
+  padding: 16px;
   border-radius: 50%;
-  border: 1px solid black;
   transform-origin: center;
+  background-color: #7377BF;
 }
 
 /* =======Images===== */
@@ -462,8 +467,8 @@ nav a {
 }
 
 .main-header-search {
-  border-left: 1px solid black;
-  border-bottom: 1px solid black;
+  border-left: 1px solid silver;
+  border-bottom: 1px solid silver;
   border-bottom-left-radius: 5px;
   padding-top: 17px;
   padding-bottom: 17px;
@@ -484,7 +489,6 @@ nav a {
   margin-top: 15px;
   margin-left: auto;
   margin-right: auto;
-  border: 1px solid black;
   border-radius: 3px;
   height: 40px;
   width: 90%;
@@ -493,7 +497,7 @@ nav a {
 }
 
 /* ===================================== 
- Main content
+ Traffic 
 ======================================== */
 .traffic-header,
 .daily {
@@ -510,6 +514,41 @@ nav a {
   list-style: none;
   display: flex;
   justify-content: space-around;
+}
+
+/* ===================================== 
+ Social stats
+======================================== */
+.social-container {
+  border: 0.5px solid silver;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  background-color: #FBFBFB;
+}
+.social-container p {
+  margin: 0;
+}
+.social-container p:first-child {
+  font-size: 1.2em;
+  color: #8385C5;
+  font-weight: bold;
+}
+.social-container p:last-child {
+  font-size: 2.5em;
+}
+.social-container .social-image {
+  padding-top: 10px;
+}
+.social-container .social-text {
+  width: 105px;
+  justify-content: left;
+  padding: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

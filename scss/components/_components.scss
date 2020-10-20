@@ -7,16 +7,22 @@
     width: 25px; 
 }
 
-#icon-twitter {
-    width: 35px; 
+#icon-tw, 
+#icon-fb, 
+#icon-gg {
+    width: 30px; 
+    height: auto; 
+    fill: #fff; 
+    
 }
 
 .social-image{   
     width: 60px; 
     height: 60px; 
+    padding: 16px; 
     border-radius: 50%; 
-    border: 1px solid black; 
    transform-origin: center;   
+   background-color: #7377BF;
 }
 
 /* =======Images===== */
