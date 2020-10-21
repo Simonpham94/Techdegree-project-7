@@ -459,7 +459,7 @@ template {
 }
 
 body {
-  font-family: "Crimson Text", serif;
+  font-family: "B612", sans-serif;
   margin: 0 auto;
 }
 
@@ -480,6 +480,12 @@ a {
 h3 {
   text-transform: uppercase;
   font-weight: 100;
+  font-size: 0.8em;
+}
+
+input,
+textarea,
+button {
   font-size: 0.8em;
 }
 
@@ -536,6 +542,10 @@ h2 {
   margin-right: 5px;
 }
 
+#name {
+  margin-top: 25px;
+}
+
 /* ===================================== 
   Navigation
 ======================================== */
@@ -565,6 +575,8 @@ nav a {
   margin-top: 0;
   margin-bottom: 0;
   padding-left: 8px;
+  margin-right: 4px;
+  font-size: 1.6em;
 }
 
 .main-header-search {
@@ -611,6 +623,9 @@ nav a {
   display: flex;
   justify-content: space-around;
 }
+.traffic-header ul li {
+  font-size: 0.7em;
+}
 
 /* ===================================== 
  Social stats
@@ -636,7 +651,7 @@ nav a {
   font-weight: bold;
 }
 .social-container p:last-child {
-  font-size: 2.5em;
+  font-size: 2.2em;
 }
 .social-container .social-image {
   padding-top: 10px;
@@ -651,8 +666,8 @@ nav a {
  New Members & Recent Activity
 ======================================== */
 .profile-image {
-  width: 45px;
-  height: 45px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
 }
 
@@ -661,6 +676,9 @@ nav a {
 }
 .members-container p {
   margin: 0;
+}
+.members-container p:last-child {
+  font-size: 0.7em;
 }
 
 .activity-container p {
@@ -673,10 +691,6 @@ nav a {
   align-items: flex-start;
   margin-bottom: 5px;
   padding-bottom: 10px;
-}
-.members-container p,
-.activity-container p {
-  font-size: 0.85em;
 }
 
 .members-container:not(:last-child),
@@ -694,11 +708,11 @@ nav a {
 
 .members-text {
   flex-basis: 60%;
-  font-size: 0.85em;
+  font-size: 0.7em;
 }
 
 .activity-text {
-  font-size: 0.85em;
+  font-size: 0.7em;
   justify-content: space-around;
 }
 
@@ -719,12 +733,12 @@ nav a {
   width: 100%;
   border-radius: 3px;
   border: 1px solid silver;
-  font-size: 0.9em;
 }
 .message input {
   height: 30px;
 }
 .message textarea {
+  padding-top: 10px;
   height: 80px;
 }
 .message button {
@@ -737,6 +751,15 @@ nav a {
 .toggle-wrapper {
   border: 1px solid black;
   height: 70px;
+  display: flex;
+}
+
+.settings p {
+  font-size: 0.8em;
+}
+
+.form-field {
+  font-size: 0.8em;
 }
 
 /*# sourceMappingURL=styles.css.map */
