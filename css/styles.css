@@ -464,12 +464,16 @@ body {
 }
 
 .traffic-header,
-.daily,
-.message,
-.settings {
+.daily {
   margin-left: auto;
   margin-right: auto;
   width: 95%;
+}
+
+.message,
+.settings {
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 a {
@@ -751,7 +755,14 @@ nav a {
 .toggle-wrapper {
   border: 1px solid black;
   height: 70px;
-  display: flex;
+  margin-bottom: 15px;
+}
+.toggle-wrapper > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+.toggle-wrapper p {
+  margin-right: 25px;
 }
 
 .settings p {
@@ -760,6 +771,13 @@ nav a {
 
 .form-field {
   font-size: 0.8em;
+}
+
+.message,
+.settings {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid silver;
 }
 
 /*# sourceMappingURL=styles.css.map */

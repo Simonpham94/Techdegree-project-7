@@ -13,11 +13,16 @@ body{
 
 .traffic-header, 
 .daily,
-.message, 
-.settings {
+ {
     margin-left: auto; 
     margin-right: auto; 
     width: 95%;  
+}
+
+.message, 
+.settings {
+    padding-left: 10px; 
+    padding-right: 10px; 
 }
 
 a{
@@ -307,6 +312,7 @@ nav {
  Message User & Settings
 ======================================== */
 .message {
+    
     input, 
     textarea{
     display: block; 
@@ -314,6 +320,7 @@ nav {
     margin-bottom: 10px; 
     padding-left: 10px; 
     background-color: #FBFBFB;
+    
     }
 
     input, 
@@ -344,11 +351,14 @@ nav {
 .toggle-wrapper {
     border: 1px solid black; 
     height: 70px;
-    display: flex;
-    
-    
-    
-   
+    margin-bottom: 15px; 
+    & >*{
+        display: inline-block;
+        vertical-align: middle;
+    } 
+    p{
+        margin-right: 25px; 
+    }
 }
 
 .settings {
@@ -360,3 +370,11 @@ nav {
 .form-field {
     font-size: .8em; 
 }
+
+.message, 
+.settings {
+    margin-top: 20px; 
+    padding-bottom: 20px; 
+    border:1px solid silver;
+}
+
