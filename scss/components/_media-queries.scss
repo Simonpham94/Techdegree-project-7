@@ -1,0 +1,89 @@
+@media screen and (min-width: 768px) {
+
+    /* ===================================== 
+    Base layout
+    ======================================== */
+
+    .traffic, 
+    .daily, 
+    .social, 
+    .members,
+    .activity, 
+    .message, 
+    .settings {
+        padding-left: 15px; 
+        padding-right: 15px;  
+    }
+
+    /* ===================================== 
+    Grid Layout
+    ======================================== */
+    .grid-container{
+        grid-template-columns: 55px 1fr; 
+        grid-template-areas: 
+            "header header"
+            "navigation main"; 
+    }
+
+    .main{
+        display: grid; 
+        grid-template-columns: 50%; 
+        
+        
+    }
+    
+
+
+
+
+    /* ===================================== 
+    Main header
+    ======================================== */
+    .main-header{
+        input{
+            width: 250px; 
+        }
+    }
+
+    /* ===================================== 
+    Alert bar
+    ======================================== */
+    // .alert {
+    //     width: 98%; 
+    // }
+
+    /* ===================================== 
+    Traffic Header
+    ======================================== */
+
+    .traffic-header{
+        ul{
+            flex-basis: 40%; 
+        }
+        h3{
+            flex-basis:  60%; 
+        }
+    }
+
+    /* ===================================== 
+    Social stats
+    ======================================== */
+
+    // .social{
+    //     display: flex; 
+    //     justify-content: space-between;
+    //     .social-text{
+    //         p:first-child{
+    //             font-size: 1em; 
+    //         }
+    //         p:last-child{
+    //             font-size: 1.7em; 
+    //         }
+    //     }
+
+        
+    //     & >*{
+    //         flex-basis: 30%; 
+    //     }
+    // }
+}

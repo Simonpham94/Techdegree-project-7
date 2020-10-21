@@ -7,22 +7,25 @@
 }
 body{
     font-family: 'B612', sans-serif;
-    margin: 0 auto; 
-       
-}
-
-.traffic-header, 
-.daily,
- {
     margin-left: auto; 
-    margin-right: auto; 
-    width: 95%;  
+    margin-right: auto;       
 }
 
+.alert{
+    margin-left: auto; 
+    margin-right: auto;
+    width: 97%;  
+}
+
+.traffic, 
+.daily, 
+.social, 
+.members,
+.activity, 
 .message, 
 .settings {
-    padding-left: 10px; 
-    padding-right: 10px; 
+    padding-left: 5px; 
+    padding-right: 5px;  
 }
 
 a{
@@ -30,10 +33,13 @@ a{
     color: #7377BF; 
 }
 
-h3{
-    text-transform: uppercase;
+h3{  
     font-weight: 100; 
     font-size: .8em; 
+}
+
+h3:first-child{
+    text-transform: uppercase;
 }
 
 input, 
@@ -48,16 +54,14 @@ button{
 
 
 .grid-container {
-        display: grid;  
-        height: 100vh; 
-        grid-template-columns: 1fr;
-          
-        grid-template-areas: 
-            "header"
-            "nav"
-            "main";
-        
+    display: grid;  
+    height: 100vh; 
+    grid-template-columns: 1fr;
     
+    grid-template-areas: 
+        "header"
+        "nav"
+        "main";   
 }
 
 header {
@@ -166,8 +170,9 @@ nav {
     
 
     input{
-        margin-right: 10px; 
+        margin-right: 6px; 
         padding-left: 10px;
+        height: 30px;
     }
     
 }
@@ -177,12 +182,9 @@ nav {
 ======================================== */
 
 .alert{
-    margin-top: 15px; 
-    margin-left: auto; 
-    margin-right: auto; 
+    margin-top: 15px;  
     border-radius: 3px;
     height: 40px; 
-    width: 90%; 
     background-color: #7377BF; 
     color: #fff; 
 }
@@ -197,14 +199,20 @@ nav {
 .traffic-header{
     display: flex; 
     align-items: center; 
+    
+    h3{
+        flex-basis: 20%; 
+    }
 
     ul{
-        flex-grow: 1; 
+        flex-basis: 80%;  
         list-style: none;
         display: flex; 
-        justify-content: space-around;
+        justify-content: flex-end; 
         li{
             font-size: .7em;
+            padding-left: 15px; 
+            
         }
     }
 }
@@ -237,6 +245,7 @@ nav {
 
     p:last-child {
         font-size: 2.2em; 
+      
     }
 
     .social-image{
@@ -294,8 +303,6 @@ nav {
 .activity{
     margin-top: 20px; 
     border: 1px solid silver; 
-    padding-left: 5px;  
-    padding-right: 5px; 
 }
 
 .members-text {
@@ -318,7 +325,6 @@ nav {
     display: block; 
     margin-top: 10px; 
     margin-bottom: 10px; 
-    padding-left: 10px; 
     background-color: #FBFBFB;
     
     }
@@ -344,20 +350,26 @@ nav {
         background-color: #7377BF; 
         color: #fff; 
         text-transform: uppercase; 
-        height: 30px; 
+        height: 40px; 
+        border-radius: 3px; 
     }
 }
 
-.toggle-wrapper {
-    border: 1px solid black; 
+.toggle-wrapper { 
     height: 70px;
-    margin-bottom: 15px; 
     & >*{
         display: inline-block;
-        vertical-align: middle;
+        vertical-align: middle;   
     } 
     p{
-        margin-right: 25px; 
+        margin-right: 40px; 
+    }
+}
+
+
+#toggle2{
+    p{
+        margin-right: 67px; 
     }
 }
 
@@ -365,16 +377,41 @@ nav {
     p{
         font-size: .8em; 
     }
+    
 }
 
 .form-field {
     font-size: .8em; 
+    margin-bottom: 20px; 
+    height: 30px; 
+    color: #9e9e9e;
+    option:not(:first-of-type) {
+        color: black;
+      }
 }
 
 .message, 
 .settings {
     margin-top: 20px; 
     padding-bottom: 20px; 
-    border:1px solid silver;
+    border: 1px solid silver;
 }
 
+.settings-button{
+    display: flex; 
+    justify-content: space-between;
+    & >* {
+        flex-basis: 48%; 
+        height: 40px; 
+        color: #fff; 
+        border: none; 
+        border-radius: 3px; 
+    }
+    button:first-child{
+        background-color: #7377BF; 
+    }
+
+    button:last-child{
+        background-color: #B2B2B2; 
+    }
+}
