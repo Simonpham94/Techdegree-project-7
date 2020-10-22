@@ -26,41 +26,54 @@
             "nav main"; 
     }
 
-    .main{
+    // .main{
 
-        grid-template-columns: 50%;   
-    }
+    //     grid-template-columns: 50%;   
+    // }
     
-    .traffic, 
-    .social {
-        grid-column: 1 / span 2; 
+    // .traffic, 
+    // .social {
+    //     grid-column: 1 / span 2; 
+    // }
+
+    // .daily, 
+    // .members, 
+    // .message {
+    //     grid-column: 1 /span 1; 
+    // }
+
+    // .mobile, 
+    // .activity, 
+    // .settings {
+    //     grid-column: 2 / span 1; 
+    // }
+
+    // .widget-container-full {
+    //     width: 90vw; 
+    // } 
+    // .widget-container-half{
+    //     width: 45vw; 
+    // }
+
+    .widget-container-half, 
+    .members-and-activity, 
+    .message-and-settings {
+        display: grid; 
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
 
-    .daily, 
-    .members, 
-    .message {
-        grid-column: 1 /span 1; 
-    }
-
-    .mobile, 
-    .activity, 
-    .settings {
-        grid-column: 2 / span 1; 
-    }
-
-    .widget-container-full {
-        width: 90vw; 
-    } 
-    .widget-container-half{
-        width: 45vw; 
-    }
+   
 
     /* ===================================== 
     Navigation Bar
     ======================================== */
     nav{
-        a {
-            display: block;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;;
+
+        a:first-child{
+            margin-top: 25px; 
         }
     }
 
@@ -97,19 +110,45 @@
     Social stats
     ======================================== */
 
-    // .social{
-    //     display: flex; 
-    //     justify-content: space-between;
-    //     .social-text{
-    //         p:first-child{
-    //             font-size: 1em; 
-    //         }
-    //         p:last-child{
-    //             font-size: 1.7em; 
-    //         }
-    //     }
-    //     & >*{
-    //         flex-basis: 30%; 
-    //     }
-    // }
+    .social{
+        display: flex; 
+        justify-content: space-between;
+        .social-text{
+            p:first-child{
+                font-size: 1em; 
+            }
+            p:last-child{
+                font-size: 1.7em; 
+            }
+        }
+        & >*{
+            flex-basis: 30%; 
+        }
+    }
+    /* ===================================== 
+    Message and settings
+    ======================================== */
+    .message, 
+    .settings {
+    margin-top: 0; 
+    
+    }
+
+    .message{
+        input{
+            margin-top: 20px; 
+        }
+        button{
+            margin-top: 20px; 
+        }
+
+        textarea{
+            margin-top: 20px; 
+            margin-bottom: 0; 
+            height: 113px; 
+        }
+    }
+
+   
+
 }

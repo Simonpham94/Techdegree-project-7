@@ -137,171 +137,175 @@
             </div>
 
             <!-- new members widget -->
-            <section class="members">
-                <h3>New members</h3>
+            <section class="members-and-activity">
+                <section class="members">
+                    <h3>New members</h3>
 
-                <div class="members-container">
-                    <img src="web_app_dashboard_v3.1/images/member-1.jpg" class="profile-image" alt="New members">
-                    <div class="members-text">
-                        <p>Victoria Chambers</p>
-                        <a href="#">victoria.chambers800@example.com</a>
+                    <div class="members-container">
+                        <img src="web_app_dashboard_v3.1/images/member-1.jpg" class="profile-image" alt="New members">
+                        <div class="members-text">
+                            <p>Victoria Chambers</p>
+                            <a href="#">victoria.chambers800@example.com</a>
+                        </div>
+                        <p>10/15/15</p>
                     </div>
-                    <p>10/15/15</p>
-                </div>
 
-                <div class="members-container">
-                    <img src="web_app_dashboard_v3.1/images/member-2.jpg" class="profile-image" alt="New members">
-                    <div class="members-text">
-                        <p>Dale Byrd</p>
-                        <a href="#">dale.byrd52@example.com</a>
+                    <div class="members-container">
+                        <img src="web_app_dashboard_v3.1/images/member-2.jpg" class="profile-image" alt="New members">
+                        <div class="members-text">
+                            <p>Dale Byrd</p>
+                            <a href="#">dale.byrd52@example.com</a>
+                        </div>
+                        <p>10/15/15</p>
                     </div>
-                    <p>10/15/15</p>
-                </div>
 
-                <div class="members-container">
-                    <img src="web_app_dashboard_v3.1/images/member-3.jpg" class="profile-image" alt="New members">
-                    <div class="members-text">
-                        <p>Dawn Wood</p>
-                        <a href="#">dawn.wood16@example.com</a>
+                    <div class="members-container">
+                        <img src="web_app_dashboard_v3.1/images/member-3.jpg" class="profile-image" alt="New members">
+                        <div class="members-text">
+                            <p>Dawn Wood</p>
+                            <a href="#">dawn.wood16@example.com</a>
+                        </div>
+                        <p>10/15/15</p>
                     </div>
-                    <p>10/15/15</p>
-                </div>
 
-                <div class="members-container">
-                    <img src="web_app_dashboard_v3.1/images/member-4.jpg" class="profile-image" alt="New members">
-                    <div class="members-text">
-                        <p>Dan Oliver</p>
-                        <a href="#">dan.oliver82@example.com</a>
+                    <div class="members-container">
+                        <img src="web_app_dashboard_v3.1/images/member-4.jpg" class="profile-image" alt="New members">
+                        <div class="members-text">
+                            <p>Dan Oliver</p>
+                            <a href="#">dan.oliver82@example.com</a>
+                        </div>
+                        <p>10/15/15</p>
                     </div>
-                    <p>10/15/15</p>
-                </div>
+                </section>
+
+                <!-- recent activity widget -->
+                <section class="activity">
+                    <h3>Recent activity</h3>
+
+                    <div class="activity-container">
+                        <img src="web_app_dashboard_v3.1/images/member-1.jpg" class="profile-image" alt="Recent activity">
+                        <div class="activity-text">
+                            <p>Victoria Chambers commented on YourApp's SEO tips</p>
+                            <p>4 hours ago</p>
+                        </div>
+                        
+                    </div>
+
+                    <div class="activity-container">
+                        <img src="web_app_dashboard_v3.1/images/member-2.jpg" class="profile-image" alt="Recent activity">
+                        <div class="activity-text">
+                            <p>Dale Byrd likes the post Facebook's changes for 2016</p>
+                            <p>5 hours ago</p>
+                        </div>
+                        
+                    </div>
+
+                    <div class="activity-container">
+                        <img src="web_app_dashboard_v3.1/images/member-3.jpg" class="profile-image" alt="Recent activity">
+                        <div class="activity-text">
+                            <p>Dawn Wood commented on Facebook's changes for 2016</p>
+                            <p>5 hours ago</p>
+                        </div>
+                        
+                    </div>
+
+                    <div class="activity-container">
+                        <img src="web_app_dashboard_v3.1/images/member-4.jpg" class="profile-image" alt="Recent activity">
+                        <div class="activity-text">
+                            <p>Dan Oliver posted YourApp's SEO tips</p>
+                            <p>1 day ago</p>
+                        </div>
+                        
+                    </div>
+                </section>
             </section>
 
-            <!-- recent activity widget -->
-            <section class="activity">
-                <h3>Recent activity</h3>
+            <section class="message-and-settings">
+                <section class="message">
+                    <h3>Message user</h3>
 
-                <div class="activity-container">
-                    <img src="web_app_dashboard_v3.1/images/member-1.jpg" class="profile-image" alt="Recent activity">
-                    <div class="activity-text">
-                        <p>Victoria Chambers commented on YourApp's SEO tips</p>
-                        <p>4 hours ago</p>
+                    <form class="widget-container">
+                        <input type="text" placeholder="Search for user" class="form-field" id="userField">
+                        <textarea placeholder="Message for user" class="form-area" id="messageField"></textarea>
+                        <button class="button-primary" id="send">Send</button>
+                        
+                    </form>
+                </section>
+
+                <section class="settings">
+                    <h3>Settings</h3>
+
+                    <div class="toggle-wrapper">
+                        <p>Send Email Notifications</p>
+                        <div class="onoffswitch">
+                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0" checked>
+                            <label class="onoffswitch-label" for="myonoffswitch">
+                                <span class="onoffswitch-inner"></span>
+                                <span class="onoffswitch-switch"></span>
+                            </label>
+                        </div>
                     </div>
-                    
-                </div>
 
-                <div class="activity-container">
-                    <img src="web_app_dashboard_v3.1/images/member-2.jpg" class="profile-image" alt="Recent activity">
-                    <div class="activity-text">
-                        <p>Dale Byrd likes the post Facebook's changes for 2016</p>
-                        <p>5 hours ago</p>
+                    <div id="toggle2" class="toggle-wrapper">
+                        <p>Set Profile to Public</p>
+                        <div class="onoffswitch">
+                            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch2" tabindex="0" checked>
+                            <label class="onoffswitch-label" for="myonoffswitch2">
+                                <span class="onoffswitch-inner"></span>
+                                <span class="onoffswitch-switch"></span>
+                            </label>
+                        </div>
                     </div>
-                    
-                </div>
 
-                <div class="activity-container">
-                    <img src="web_app_dashboard_v3.1/images/member-3.jpg" class="profile-image" alt="Recent activity">
-                    <div class="activity-text">
-                        <p>Dawn Wood commented on Facebook's changes for 2016</p>
-                        <p>5 hours ago</p>
+                    <select class="form-field" id="timezone">
+                        <option disabled selected>Select a Timezone</option>
+                        <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
+                        <option value="-11:00">(GMT -11:00) Midway Island, Samoa</option>
+                        <option value="-10:00">(GMT -10:00) Hawaii</option>
+                        <option value="-09:50">(GMT -9:30) Taiohae</option>
+                        <option value="-09:00">(GMT -9:00) Alaska</option>
+                        <option value="-08:00">(GMT -8:00) Pacific Time (US &amp; Canada)</option>
+                        <option value="-07:00">(GMT -7:00) Mountain Time (US &amp; Canada)</option>
+                        <option value="-06:00">(GMT -6:00) Central Time (US &amp; Canada), Mexico City</option>
+                        <option value="-05:00">(GMT -5:00) Eastern Time (US &amp; Canada), Bogota, Lima</option>
+                        <option value="-04:50">(GMT -4:30) Caracas</option>
+                        <option value="-04:00">(GMT -4:00) Atlantic Time (Canada), Caracas, La Paz</option>
+                        <option value="-03:50">(GMT -3:30) Newfoundland</option>
+                        <option value="-03:00">(GMT -3:00) Brazil, Buenos Aires, Georgetown</option>
+                        <option value="-02:00">(GMT -2:00) Mid-Atlantic</option>
+                        <option value="-01:00">(GMT -1:00) Azores, Cape Verde Islands</option>
+                        <option value="+00:00">(GMT) Western Europe Time, London, Lisbon, Casablanca</option>
+                        <option value="+01:00">(GMT +1:00) Brussels, Copenhagen, Madrid, Paris</option>
+                        <option value="+02:00">(GMT +2:00) Kaliningrad, South Africa</option>
+                        <option value="+03:00">(GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg</option>
+                        <option value="+03:50">(GMT +3:30) Tehran</option>
+                        <option value="+04:00">(GMT +4:00) Abu Dhabi, Muscat, Baku, Tbilisi</option>
+                        <option value="+04:50">(GMT +4:30) Kabul</option>
+                        <option value="+05:00">(GMT +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent</option>
+                        <option value="+05:50">(GMT +5:30) Bombay, Calcutta, Madras, New Delhi</option>
+                        <option value="+05:75">(GMT +5:45) Kathmandu, Pokhara</option>
+                        <option value="+06:00">(GMT +6:00) Almaty, Dhaka, Colombo</option>
+                        <option value="+06:50">(GMT +6:30) Yangon, Mandalay</option>
+                        <option value="+07:00">(GMT +7:00) Bangkok, Hanoi, Jakarta</option>
+                        <option value="+08:00">(GMT +8:00) Beijing, Perth, Singapore, Hong Kong</option>
+                        <option value="+08:75">(GMT +8:45) Eucla</option>
+                        <option value="+09:00">(GMT +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk</option>
+                        <option value="+09:50">(GMT +9:30) Adelaide, Darwin</option>
+                        <option value="+10:00">(GMT +10:00) Eastern Australia, Guam, Vladivostok</option>
+                        <option value="+10:50">(GMT +10:30) Lord Howe Island</option>
+                        <option value="+11:00">(GMT +11:00) Magadan, Solomon Islands, New Caledonia</option>
+                        <option value="+11:50">(GMT +11:30) Norfolk Island</option>
+                        <option value="+12:00">(GMT +12:00) Auckland, Wellington, Fiji, Kamchatka</option>
+                        <option value="+12:75">(GMT +12:45) Chatham Islands</option>
+                        <option value="+13:00">(GMT +13:00) Apia, Nukualofa</option>
+                        <option value="+14:00">(GMT +14:00) Line Islands, Tokelau</option>
+
+                    </select>
+                    <div class="settings-button">
+                        <button class="button-primary" id="save">Save</button>
+                        <button class="button-disabled" id="cancel">Cancel</button>
                     </div>
-                    
-                </div>
-
-                <div class="activity-container">
-                    <img src="web_app_dashboard_v3.1/images/member-4.jpg" class="profile-image" alt="Recent activity">
-                    <div class="activity-text">
-                        <p>Dan Oliver posted YourApp's SEO tips</p>
-                        <p>1 day ago</p>
-                    </div>
-                    
-                </div>
-            </section>
-            
-            <section class="message">
-                <h3>Message user</h3>
-
-                <form class="wudget-container">
-                    <input type="text" placeholder="Search for user" class="form-field" id="userField">
-                    <textarea placeholder="Message for user" class="form-area" id="messageField"></textarea>
-                    <button class="button-primary" id="send">Send</button>
-                    
-                </form>
-            </section>
-
-            <section class="settings">
-                <h3>Settings</h3>
-
-                <div class="toggle-wrapper">
-                    <p>Send Email Notifications</p>
-                    <div class="onoffswitch">
-                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0" checked>
-                        <label class="onoffswitch-label" for="myonoffswitch">
-                            <span class="onoffswitch-inner"></span>
-                            <span class="onoffswitch-switch"></span>
-                        </label>
-                    </div>
-                </div>
-
-                <div id="toggle2" class="toggle-wrapper">
-                    <p>Set Profile to Public</p>
-                    <div class="onoffswitch">
-                        <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch2" tabindex="0" checked>
-                        <label class="onoffswitch-label" for="myonoffswitch2">
-                            <span class="onoffswitch-inner"></span>
-                            <span class="onoffswitch-switch"></span>
-                        </label>
-                    </div>
-                </div>
-
-                <select class="form-field" id="timezone">
-                    <option disabled selected>Select a Timezone</option>
-                    <option value="-12:00">(GMT -12:00) Eniwetok, Kwajalein</option>
-                    <option value="-11:00">(GMT -11:00) Midway Island, Samoa</option>
-                    <option value="-10:00">(GMT -10:00) Hawaii</option>
-                    <option value="-09:50">(GMT -9:30) Taiohae</option>
-                    <option value="-09:00">(GMT -9:00) Alaska</option>
-                    <option value="-08:00">(GMT -8:00) Pacific Time (US &amp; Canada)</option>
-                    <option value="-07:00">(GMT -7:00) Mountain Time (US &amp; Canada)</option>
-                    <option value="-06:00">(GMT -6:00) Central Time (US &amp; Canada), Mexico City</option>
-                    <option value="-05:00">(GMT -5:00) Eastern Time (US &amp; Canada), Bogota, Lima</option>
-                    <option value="-04:50">(GMT -4:30) Caracas</option>
-                    <option value="-04:00">(GMT -4:00) Atlantic Time (Canada), Caracas, La Paz</option>
-                    <option value="-03:50">(GMT -3:30) Newfoundland</option>
-                    <option value="-03:00">(GMT -3:00) Brazil, Buenos Aires, Georgetown</option>
-                    <option value="-02:00">(GMT -2:00) Mid-Atlantic</option>
-                    <option value="-01:00">(GMT -1:00) Azores, Cape Verde Islands</option>
-                    <option value="+00:00">(GMT) Western Europe Time, London, Lisbon, Casablanca</option>
-                    <option value="+01:00">(GMT +1:00) Brussels, Copenhagen, Madrid, Paris</option>
-                    <option value="+02:00">(GMT +2:00) Kaliningrad, South Africa</option>
-                    <option value="+03:00">(GMT +3:00) Baghdad, Riyadh, Moscow, St. Petersburg</option>
-                    <option value="+03:50">(GMT +3:30) Tehran</option>
-                    <option value="+04:00">(GMT +4:00) Abu Dhabi, Muscat, Baku, Tbilisi</option>
-                    <option value="+04:50">(GMT +4:30) Kabul</option>
-                    <option value="+05:00">(GMT +5:00) Ekaterinburg, Islamabad, Karachi, Tashkent</option>
-                    <option value="+05:50">(GMT +5:30) Bombay, Calcutta, Madras, New Delhi</option>
-                    <option value="+05:75">(GMT +5:45) Kathmandu, Pokhara</option>
-                    <option value="+06:00">(GMT +6:00) Almaty, Dhaka, Colombo</option>
-                    <option value="+06:50">(GMT +6:30) Yangon, Mandalay</option>
-                    <option value="+07:00">(GMT +7:00) Bangkok, Hanoi, Jakarta</option>
-                    <option value="+08:00">(GMT +8:00) Beijing, Perth, Singapore, Hong Kong</option>
-                    <option value="+08:75">(GMT +8:45) Eucla</option>
-                    <option value="+09:00">(GMT +9:00) Tokyo, Seoul, Osaka, Sapporo, Yakutsk</option>
-                    <option value="+09:50">(GMT +9:30) Adelaide, Darwin</option>
-                    <option value="+10:00">(GMT +10:00) Eastern Australia, Guam, Vladivostok</option>
-                    <option value="+10:50">(GMT +10:30) Lord Howe Island</option>
-                    <option value="+11:00">(GMT +11:00) Magadan, Solomon Islands, New Caledonia</option>
-                    <option value="+11:50">(GMT +11:30) Norfolk Island</option>
-                    <option value="+12:00">(GMT +12:00) Auckland, Wellington, Fiji, Kamchatka</option>
-                    <option value="+12:75">(GMT +12:45) Chatham Islands</option>
-                    <option value="+13:00">(GMT +13:00) Apia, Nukualofa</option>
-                    <option value="+14:00">(GMT +14:00) Line Islands, Tokelau</option>
-
-                </select>
-                <div class="settings-button">
-                    <button class="button-primary" id="save">Save</button>
-                    <button class="button-disabled" id="cancel">Cancel</button>
-                </div>
+                </section>
             </section>
         </main>
 
