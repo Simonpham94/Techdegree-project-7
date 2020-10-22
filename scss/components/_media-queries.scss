@@ -23,8 +23,9 @@
         grid-template-columns: 55px 1fr; 
         grid-template-areas: 
             "header header"
-            "navigation main"; 
+            "nav main"; 
     }
+
 
     .main{
 
@@ -54,6 +55,16 @@
     .widget-container-half{
         width: 45vw; 
     }
+
+    /* ===================================== 
+    Navigation Bar
+    ======================================== */
+    // nav{
+    //     height: 100vh; 
+    //     display: block;  
+    //     grid-area:  navigation; 
+    // }
+
 
     /* ===================================== 
     Main header

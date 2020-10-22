@@ -55,8 +55,8 @@ button{
 
 .grid-container {
     display: grid;  
-    // height: 100vh; 
     grid-template-columns: 1fr;
+    grid-template-rows: auto;
     grid-template-areas: 
         "header"
         "nav"
@@ -118,7 +118,7 @@ h2{
 }
 
 /* ===================================== 
-  Navigation
+  Navigation Bar
 ======================================== */
 
 nav {
