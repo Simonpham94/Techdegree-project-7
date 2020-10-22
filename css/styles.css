@@ -123,8 +123,8 @@
 .activity,
 .message,
 .settings {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
   }
 
   /* ===================================== 
@@ -145,11 +145,12 @@
   ======================================== */
   .main-header input {
     width: 250px;
+    margin-right: 10px !important;
+  }
+  .main-header h2 {
+    padding-left: 10px !important;
   }
 
-  /* ===================================== 
-  Alert bar
-  ======================================== */
   /* ===================================== 
   Traffic Header
   ======================================== */
@@ -690,7 +691,7 @@ nav a {
 }
 .traffic-header ul li {
   font-size: 0.7em;
-  padding-left: 15px;
+  padding-left: 20px;
 }
 
 /* ===================================== 

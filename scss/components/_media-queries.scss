@@ -11,9 +11,11 @@
     .activity, 
     .message, 
     .settings {
-        padding-left: 15px; 
-        padding-right: 15px;  
+        padding-left: 15px !important; 
+        padding-right: 15px !important;  
     }
+
+
 
     /* ===================================== 
     Grid Layout
@@ -27,30 +29,23 @@
 
     .main{
         display: grid; 
-        grid-template-columns: 50%; 
-        
-        
+        grid-template-columns: 50%;   
     }
     
-
-
-
-
     /* ===================================== 
     Main header
     ======================================== */
     .main-header{
         input{
             width: 250px; 
+            margin-right: 10px !important; 
         }
-    }
 
-    /* ===================================== 
-    Alert bar
-    ======================================== */
-    // .alert {
-    //     width: 98%; 
-    // }
+        h2 {
+            padding-left: 10px !important; 
+        }
+        
+    }
 
     /* ===================================== 
     Traffic Header
