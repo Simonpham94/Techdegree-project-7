@@ -112,7 +112,7 @@
   right: 0px;
 }
 
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
   /* ===================================== 
   Base layout
   ======================================== */
@@ -136,8 +136,32 @@
   }
 
   .main {
-    display: grid;
     grid-template-columns: 50%;
+  }
+
+  .traffic,
+.social {
+    grid-column: 1/span 2;
+  }
+
+  .daily,
+.members,
+.message {
+    grid-column: 1/span 1;
+  }
+
+  .mobile,
+.activity,
+.settings {
+    grid-column: 2/span 1;
+  }
+
+  .widget-container-full {
+    width: 90vw;
+  }
+
+  .widget-container-half {
+    width: 45vw;
   }
 
   /* ===================================== 
@@ -559,7 +583,6 @@ button {
 ======================================== */
 .grid-container {
   display: grid;
-  height: 100vh;
   grid-template-columns: 1fr;
   grid-template-areas: "header" "nav" "main";
 }
@@ -574,6 +597,7 @@ nav {
 
 main {
   grid-area: main;
+  display: grid;
 }
 
 /* ===================================== 
@@ -692,6 +716,11 @@ nav a {
 .traffic-header ul li {
   font-size: 0.7em;
   padding-left: 20px;
+}
+
+.widget-container-full,
+.widget-container-half {
+  width: 95vw;
 }
 
 /* ===================================== 

@@ -55,9 +55,8 @@ button{
 
 .grid-container {
     display: grid;  
-    height: 100vh; 
+    // height: 100vh; 
     grid-template-columns: 1fr;
-    
     grid-template-areas: 
         "header"
         "nav"
@@ -75,6 +74,7 @@ nav {
 
 main {
     grid-area: main; 
+    display: grid; 
 }
 
 /* ===================================== 
@@ -194,8 +194,6 @@ nav {
  Traffic 
 ======================================== */
 
-
-
 .traffic-header{
     display: flex; 
     align-items: center; 
@@ -217,6 +215,10 @@ nav {
     }
 }
 
+.widget-container-full, 
+.widget-container-half{
+        width: 95vw; 
+    }
 /* ===================================== 
  Social stats
 ======================================== */
