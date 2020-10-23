@@ -630,6 +630,7 @@ nav a {
 .members-text {
   flex-basis: 60%;
   font-size: 0.7em;
+  margin-left: -90px;
 }
 
 .activity-text {
