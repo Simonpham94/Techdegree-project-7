@@ -506,9 +506,13 @@ nav a {
   background-color: #7377BF;
   color: #fff;
 }
+.alert > * {
+  padding-top: 5px;
+}
 
 .alert-banner {
   margin-bottom: 5px;
+  font-size: 0.8em;
   padding-left: 10px;
   padding-right: 10px;
   display: flex;
@@ -539,6 +543,11 @@ nav a {
 .traffic-header ul li {
   font-size: 0.7em;
   padding-left: 20px;
+}
+
+.traffic,
+.daily-charts {
+  width: 100%;
 }
 
 /* ===================================== 
@@ -852,11 +861,16 @@ nav a {
     grid-template-areas: "header header" "nav main";
   }
 
-  .widget-container-half,
-.members-and-activity,
+  .members-and-activity,
 .message-and-settings {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .daily-charts {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   /* ===================================== 
