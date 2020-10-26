@@ -36,7 +36,6 @@ canvas {
 
 a{
     text-decoration: none; 
-    color: #7377BF; 
 }
 
 h3{  
@@ -286,18 +285,34 @@ nav {
         list-style: none;
         display: flex; 
         justify-content: flex-end; 
-        li{
-            font-size: .7em;
-            padding-left: 20px; 
-            
+        
         }
-    }
+        li{
+             
+            font-size: .7em;
+            padding-left: 20px;  
+        }
+
+        button{
+            border: none; 
+            background-color: #fff; 
+        }
+        button:focus{
+            padding: 5px 5px; 
+            outline: none; 
+            border-radius: 10px; 
+            background-color: #84CA92; 
+            color: #fff;
+        }
+    
 }
 
 .traffic, 
 .daily-charts{
     width: 100%; 
 }
+
+
 
 /* ===================================== 
  Social stats
@@ -353,7 +368,9 @@ nav {
     p{
         margin: 0 0 0; 
     }
-    
+    a {
+        color: #7377BF; 
+    }
 }
 .profile-image {
     width: 40px; 
@@ -394,6 +411,16 @@ nav {
 /* ===================================== 
  Message User & Settings
 ======================================== */
+.message, 
+.settings{
+    button{
+        font-size: .8em; 
+        border-radius: 3px;
+        width: 100%; 
+        border: 1px solid silver; 
+    }
+}
+
 .message {
     
     input, 
@@ -418,7 +445,6 @@ nav {
         color: #fff; 
         text-transform: uppercase; 
         height: 40px; 
-        border-radius: 3px; 
     }
 }
 
@@ -471,7 +497,6 @@ nav {
         height: 40px; 
         color: #fff; 
         border: none; 
-        border-radius: 3px; 
     }
     button:first-child{
         background-color: #7377BF; 
