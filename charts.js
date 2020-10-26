@@ -96,7 +96,7 @@
         labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
     "Aug", "Sep", "Oct", "Nov", "Dec"],
         datasets: [{
-        data: [75000, 125000, 100000, 200000, 150000, 175000, 125000, 185000, 225000, 1500, 250000, 12350],
+        data: [75000, 125000, 100000, 200000, 150000, 175000, 125000, 185000, 225000, 150000, 250000, 12350],
         backgroundColor: 'rgba(116, 119, 191, .3)',
         borderWidth: 1,
     }]
@@ -127,7 +127,7 @@ dataSet.addEventListener('click', (e) =>{
         let trafficChart = new Chart(trafficCanvas, {
             type: 'line', 
             data: trafficDataDaily, 
-            options: trafficOptionsDail
+            options: trafficOptionsDaily
         }) 
     } else if (element.textContent.contains('Hourly')) {
         let trafficChart = new Chart(trafficCanvas, {
@@ -151,7 +151,7 @@ dataSet.addEventListener('click', (e) =>{
  
  }) ; 
 
-
+ 
 
 
 // Barchart
