@@ -43,6 +43,7 @@ send.addEventListener('click', () =>{
 const iconBell = document.getElementById('icon-bell'); 
 const notifications = document.getElementById('notifications');
 const notifBanner = document.querySelectorAll('.notif-banner');
+
 let timesClicked = 0;  
 
 iconBell.addEventListener('click', () =>{
@@ -52,16 +53,17 @@ iconBell.addEventListener('click', () =>{
     notifications.className = ('iconBell'); 
     notifications.innerHTML =
     `
-        <div class = "notif-banner">
+        <div id = "notif1" class = "notif-banner">
             <p> <strong>Alex Truong</strong> liked your post</p>
-            <p class = "alert-notif-close">x</p>
+            <p id = "del1" class = "alert-notif-close">x</p>
         </div>
 
-        <div class = "notif-banner">
+        <div id = "notif2" class = "notif-banner">
             <p><strong>Alex Truong</strong> mentioned you in a comment</p>
-            <p class = "alert-notif-close">x</p>
+            <p id = "del2" class = "alert-notif-close">x</p>
         </div>
     `
+
     //click the bell icon to show or hide the notifications
     if (timesClicked % 2 == 0){
         notifications.style.display = 'none'; 
@@ -69,17 +71,27 @@ iconBell.addEventListener('click', () =>{
         notifications.style.display = 'block';
     }
 
+
+    //click 'x' button to delete a notification
+    const del1 = document.getElementById('del1'); 
+    const del2 = document.getElementById('del2'); 
+    const notif1 = document.getElementById('notif1'); 
+    const notif2 = document.getElementById('notif2');   
+    del1.addEventListener('click', e => {
+        notif1.style.display = 'none'; 
+    })
+    del2.addEventListener('click', e => {
+        notif2.style.display = 'none'; 
+    })
+    
 })
 
+
+
+
+
     
-for ( let i = 0; i < notifBanner.length; i++) {
-    notifBanner[i].addEventListener('click', e => {
-        const element = e.target; 
-        if (element.classList.contains('alert-notif-close')) {
-            notifBanner[i].style.display = 'none'; 
-        }
-    })
-}
+
         
         
 
