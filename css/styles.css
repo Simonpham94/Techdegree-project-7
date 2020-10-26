@@ -351,6 +351,10 @@ body {
   max-width: 1200px;
 }
 
+canvas {
+  max-width: 100%;
+}
+
 .alert {
   margin-left: auto;
   margin-right: auto;
@@ -382,12 +386,6 @@ h3:first-child {
   text-transform: uppercase;
 }
 
-input,
-textarea,
-button {
-  font-size: 0.8em;
-}
-
 /* ===================================== 
    Grid Layout
 ======================================== */
@@ -414,35 +412,72 @@ main {
   Header
 ======================================== */
 header {
-  display: flex;
-  justify-content: space-around;
   background-color: #7477BF;
-  color: #fff;
-  padding: 15px 15px;
+  padding: 10px;
 }
 
-.wrapper-ava {
+.header-container {
   display: flex;
-  border-left: 1px solid #fff;
+  justify-content: space-between;
+  background-color: #7477BF;
+  color: #fff;
+}
+.header-container h3 {
+  min-width: 100px;
+}
+
+.empty {
+  border-right: 1px solid black;
+}
+
+.header-right {
+  display: flex;
+  flex-basis: 25%;
+  max-width: 200px;
 }
 
 h2 {
-  flex-grow: 10;
+  flex-basis: 80%;
+  margin-left: 5px;
+  max-width: 145px;
 }
 
 #icon-bell {
-  margin-right: 20px;
-  border-right: 1px solid black;
+  margin-right: 15px;
 }
 
 #avatar {
   margin-top: 10px;
-  margin-left: 2px;
+  margin-left: 10px;
   margin-right: 5px;
 }
 
 #name {
   margin-top: 25px;
+}
+
+#notifications {
+  position: absolute;
+  background-color: #4D4C72;
+  color: goldenrod;
+  min-width: 300px;
+  transform: translateX(-100px) translateY(50px);
+  transition: 1s;
+  border-radius: 3px;
+  opacity: 0.9;
+}
+#notifications .notif-banner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 0.85em;
+}
+#notifications .notif-banner:not(:last-child) {
+  border-bottom: 1px dashed black;
+}
+#notifications .notif-banner p {
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 /* ===================================== 
@@ -488,12 +523,33 @@ nav a {
   margin-bottom: 0;
   flex-grow: 10;
   background-color: silver;
-  text-align: right;
+  padding-right: 10px;
+}
+.main-header-search .search-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  width: 250px;
+  border: 1px solid silver;
+  border-radius: 3px;
+  float: right;
+  padding-right: 10px;
+}
+.main-header-search .search-box a {
+  display: inline-block;
+  padding-top: 3px;
 }
 .main-header-search input {
   margin-right: 6px;
   padding-left: 10px;
   height: 30px;
+  background-color: transparent;
+  font-size: 0.8em;
+  border: none;
+}
+.main-header-search input:focus {
+  border: none;
 }
 
 /* ===================================== 
@@ -504,7 +560,7 @@ nav a {
   border-radius: 3px;
   height: 50px;
   background-color: #7377BF;
-  color: #fff;
+  color: gold;
 }
 .alert > * {
   padding-top: 5px;
@@ -520,7 +576,8 @@ nav a {
   justify-content: space-between;
 }
 
-.alert-banner-close:hover {
+.alert-banner-close,
+.alert-notif-close {
   cursor: pointer;
 }
 
@@ -588,32 +645,27 @@ nav a {
 /* ===================================== 
  New Members & Recent Activity
 ======================================== */
+.members-container,
+.activity-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  padding-bottom: 10px;
+}
+.members-container p,
+.activity-container p {
+  margin: 0 0 0;
+}
+
 .profile-image {
   width: 40px;
   height: 40px;
   border-radius: 50%;
 }
 
-.members-container {
-  justify-content: space-between;
-}
-.members-container p {
-  margin: 0;
-}
 .members-container p:last-child {
   font-size: 0.7em;
-}
-
-.activity-container p {
-  margin: 0 0 0 25px;
-}
-
-.members-container,
-.activity-container {
-  display: flex;
-  align-items: flex-start;
-  margin-bottom: 5px;
-  padding-bottom: 10px;
+  margin-left: auto;
 }
 
 .members-container:not(:last-child),
@@ -627,15 +679,15 @@ nav a {
   border: 1px solid silver;
 }
 
-.members-text {
-  flex-basis: 60%;
-  font-size: 0.7em;
-  margin-left: -90px;
-}
-
+.members-text,
 .activity-text {
   font-size: 0.7em;
-  justify-content: space-around;
+  margin-left: 15px;
+}
+
+.members-text {
+  width: 200px;
+  max-width: 60%;
 }
 
 /* ===================================== 
@@ -647,13 +699,6 @@ nav a {
   margin-top: 10px;
   margin-bottom: 10px;
   background-color: #FBFBFB;
-}
-.message input,
-.message textarea,
-.message button {
-  width: 100%;
-  border-radius: 3px;
-  border: 1px solid silver;
 }
 .message input {
   height: 30px;
@@ -692,7 +737,6 @@ nav a {
 .form-field {
   font-size: 0.8em;
   margin-bottom: 20px;
-  width: 100%;
   height: 30px;
   color: #9e9e9e;
 }
@@ -725,6 +769,27 @@ nav a {
   background-color: #B2B2B2;
 }
 
+/* =======Base===== */
+textarea,
+button {
+  font-size: 0.8em;
+  border-radius: 3px;
+  width: 100%;
+  border: 1px solid silver;
+}
+
+.message input {
+  width: 100%;
+  font-size: 0.8em;
+  border-radius: 3px;
+  border: 1px solid silver;
+}
+
+select {
+  border: 1px solid silver;
+  width: 100%;
+}
+
 /* =======Icons===== */
 #icon-bell,
 #icon-dashboard,
@@ -732,6 +797,11 @@ nav a {
 #icon-members,
 #icon-visits {
   width: 25px;
+}
+
+#icon-bell:hover {
+  transform: scale(1.2);
+  transition: 0.6s;
 }
 
 #icon-tw,
@@ -749,6 +819,10 @@ nav a {
   border-radius: 50%;
   transform-origin: center;
   background-color: #7377BF;
+}
+
+.icon-mag {
+  width: 16px;
 }
 
 /* =======Images===== */
@@ -924,6 +998,9 @@ nav a {
     flex-basis: 30%;
   }
 
+  /* ===================================== 
+  Members and activity
+  ======================================== */
   /* ===================================== 
   Message and settings
   ======================================== */
