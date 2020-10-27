@@ -60,9 +60,7 @@
             display: false
         }
     }
-
     
-
     // data for WEEKLY traffic line graph
     let trafficDataWeekly = {
         labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
@@ -120,28 +118,33 @@
         }
     }
 
-    
+let trafficChart = new Chart(trafficCanvas, {
+        type: 'line', 
+        data: trafficDataDaily, 
+        options: trafficOptionsDaily
+})
+
 dataSet.addEventListener('click', (e) =>{
-    const element = e.target; 
-    if(element.textContent.contains('Daily')) {
-        let trafficChart = new Chart(trafficCanvas, {
-            type: 'line', 
-            data: trafficDataDaily, 
-            options: trafficOptionsDaily
-        }) 
-    } else if (element.textContent.contains('Hourly')) {
+    const element = e.target;      
+    if (element.textContent.includes('Hourly')) {
         let trafficChart = new Chart(trafficCanvas, {
             type: 'line', 
             data: trafficDataHourly, 
             options: trafficOptionsHourly
         })
-    } else if (element.textContent.contains('Weekly')) {
+    } else if (element.textContent.includes('Daily')) {
+        let trafficChart = new Chart(trafficCanvas, {
+            type: 'line', 
+            data: trafficDataDaily, 
+            options: trafficOptionsDaily
+        }) 
+    } else if (element.textContent.includes('Weekly')) {
         let trafficChart = new Chart(trafficCanvas, {
             type: 'line', 
             data: trafficDataWeekly, 
             options: trafficOptionsWeekly
         }) 
-    } else if (element.textContent.contains('Monthly')){
+    } else if (element.textContent.includes('Monthly')){
         let trafficChart = new Chart(trafficCanvas, {
             type: 'line', 
             data: trafficDataMonthly, 

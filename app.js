@@ -38,16 +38,18 @@ send.addEventListener('click', () =>{
     
 });
 
-//DROPDOWN MENU FROM THE ALERT ICON
+//POPUP MENU FROM THE ALERT ICON
 
 const iconBell = document.getElementById('icon-bell'); 
 const notifications = document.getElementById('notifications');
 const notifBanner = document.querySelectorAll('.notif-banner');
+const notifAlert = document.getElementById('notifAlert'); 
 
 let timesClicked = 0;  
 
 iconBell.addEventListener('click', () =>{
 
+    notifAlert.style.display = 'none'; 
     //create notif
     timesClicked++; 
     notifications.className = ('iconBell'); 
@@ -86,14 +88,47 @@ iconBell.addEventListener('click', () =>{
     
 })
 
+//AUTOCOMPLETE FEATURE
 
+const names = [
+    'Victoria Chambers', 
+    'Dale Bryd', 
+    'Dawn Wood', 
+    'Dan Oliver'
+]; 
+  
+// const userName = 
+// document.getElementById('userField').addEventListener('input', e =>{
+//     let userNameArray = []; 
+//     if(e.target.value) {
+//         userNameArray = names.filter(name => name.toLowerCase().includes(e.target.value)); 
+//         // userNameArray = userNameArray.map(name =>`<li>${name}</li>`)
+//     }; 
+//     showUserNameArray(userNameArray); 
+// })
 
-
-
+// function showUserNameArray(userNameArray){
+//     const html =  !userNameArray.length ? '' : userNameArray.join('');
     
+// } 
+const fruits = ['Apple', 'Orange', 'Mango', 'Watermelon', 'Kiwi', 'Banana', 'Grapes'];
 
-        
-        
+document.getElementById('userField').addEventListener('input', (e)=>{
+ 
+    let fruitsArray = [];
+    
+    if(e.target.value){
+        fruitsArray = fruits.filter(fruit => fruit.toLowerCase().includes(e.target.value));
+        fruitsArray = fruitsArray.map(fruit => `<li>${fruit}</li>`)
+    }
+ 
+    showFruitsArray(fruitsArray);
+});
+ 
+function showFruitsArray(fruitsArray){
+    const html = !fruitsArray.length ? '' : fruitsArray.join('');
+    document.querySelector('ul').innerHTML = html;
+}
 
 
 
