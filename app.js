@@ -90,45 +90,35 @@ iconBell.addEventListener('click', () =>{
 
 //AUTOCOMPLETE FEATURE
 
-const names = [
-    'Victoria Chambers', 
-    'Dale Bryd', 
-    'Dawn Wood', 
-    'Dan Oliver'
+const usersNames = [
+    {name: 'Victoria Chambers'}, 
+    {name: 'Dale Byrd'}, 
+    {name: 'Dawn Wood'}, 
+    {name: 'Dan Oliver'}
 ]; 
-  
-// const userName = 
-// document.getElementById('userField').addEventListener('input', e =>{
-//     let userNameArray = []; 
-//     if(e.target.value) {
-//         userNameArray = names.filter(name => name.toLowerCase().includes(e.target.value)); 
-//         // userNameArray = userNameArray.map(name =>`<li>${name}</li>`)
-//     }; 
-//     showUserNameArray(userNameArray); 
-// })
 
-// function showUserNameArray(userNameArray){
-//     const html =  !userNameArray.length ? '' : userNameArray.join('');
-    
-// } 
-const fruits = ['Apple', 'Orange', 'Mango', 'Watermelon', 'Kiwi', 'Banana', 'Grapes'];
+const searchInput = document.querySelector('.form-field'); 
+const suggestionsPanel = document.querySelector('.suggestions'); 
 
-document.getElementById('userField').addEventListener('input', (e)=>{
- 
-    let fruitsArray = [];
-    
-    if(e.target.value){
-        fruitsArray = fruits.filter(fruit => fruit.toLowerCase().includes(e.target.value));
-        fruitsArray = fruitsArray.map(fruit => `<li>${fruit}</li>`)
+searchInput.addEventListener('keyup', function(){
+    const input = searchInput.value; 
+    suggestionsPanel.innerHTML = ''; 
+    const suggestions = usersNames.filter(function(usersName){
+        return usersName.name.toLowerCase().startsWith(input); 
+    }); 
+
+    suggestions.forEach(function(suggested) {
+        const div = document.createElement('div'); 
+        div.innerHTML = suggestioned.name; 
+        suggestionsPanel.appendChild(div); 
+    }); 
+    if(input == '') {
+        suggestionsPanel.innerHTML = ''; 
     }
+})
+  
  
-    showFruitsArray(fruitsArray);
-});
- 
-function showFruitsArray(fruitsArray){
-    const html = !fruitsArray.length ? '' : fruitsArray.join('');
-    document.querySelector('ul').innerHTML = html;
-}
+
 
 
 

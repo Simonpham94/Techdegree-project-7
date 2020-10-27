@@ -789,6 +789,18 @@ nav a {
   background-color: #B2B2B2;
 }
 
+.suggestions {
+  border-top: 1px solid #4D4C72;
+  margin-top: -10px;
+}
+
+.suggestions > div {
+  font-size: 0.8em;
+  padding: 5px;
+  color: goldenrod;
+  border-top: 1px solid #8385C5;
+}
+
 /* =======Base===== */
 textarea {
   font-size: 0.8em;
