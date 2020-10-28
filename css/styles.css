@@ -801,6 +801,11 @@ nav a {
   border-top: 1px solid #8385C5;
 }
 
+.suggestions > div:hover {
+  background-color: rgba(131, 133, 197, 0.5);
+  color: #fff;
+}
+
 /* =======Base===== */
 textarea {
   font-size: 0.8em;

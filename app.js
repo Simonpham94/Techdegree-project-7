@@ -100,7 +100,7 @@ const usersNames = [
 const searchInput = document.querySelector('.form-field'); 
 const suggestionsPanel = document.querySelector('.suggestions'); 
 
-searchInput.addEventListener('keyup', function(){
+searchInput.addEventListener('input', function(){
     const input = searchInput.value.toLowerCase(); 
     suggestionsPanel.innerHTML = ''; 
     const suggestions = usersNames.filter(function(usersName){
@@ -115,7 +115,22 @@ searchInput.addEventListener('keyup', function(){
     if(input == '') {
         suggestionsPanel.innerHTML = ''; 
     }
+
+    //Click on a suggestion to replace the input with the suggestion
+    const divs = document.querySelector('.suggestions').childNodes;
+    for (let i = 0; i <divs.length; i++) {
+        divs[i].addEventListener('click', e => {
+            searchInput.value = e.target.textContent;
+            for (let j = 0; j < divs.length; j++) {
+                divs[j].style.display = 'none'; 
+            } 
+        })
+    }
+    
 })
+
+
+
   
 //LOCAL STORAGE
 
@@ -123,10 +138,11 @@ const toggle1 = document.getElementById('myonoffswitch');
 const toggle2 = document.getElementById('myonoffswitch2'); 
 const timeZone = document.getElementById('timezone'); 
 
+
     //Create const for saved values
     const switchPref1 = localStorage.getItem('switchPref1'); 
     const switchPref2 = localStorage.getItem('switchPref2'); 
-    const timeZonePref = localStorage.getItem('timeZonePref'); 
+    const timeZonePref = localStorage.getItem('timeZonePref')
 
     //Set value of ID basd on saved profile settings
     const loadSettings = function() {
@@ -137,7 +153,7 @@ const timeZone = document.getElementById('timezone');
             toggle2.checked = (switchPref2 === 'true'); 
         }
         if (timeZonePref !== null) {
-            timeZone.value = (timeZonePref)
+            timeZone.selected = (timeZonePref === 'true');
         }
     }
 
@@ -161,6 +177,7 @@ const timeZone = document.getElementById('timezone');
         document.getElementById('save').addEventListener('click', function() {
             localStorage.setItem('switchPref1', toggle1.checked); 
             localStorage.setItem('switchPref2', toggle2.checked); 
+            localStorage.setItem('timeZonePref', timeZone.selected)
             alert('Settings successfully saved!'); 
         }); 
         // Send all settings back to default values when cancel pushed
@@ -170,6 +187,7 @@ const timeZone = document.getElementById('timezone');
             if (cancel) {
                 localStorage.setItem('switchPref1', toggle1.checked = null)
                 localStorage.setItem('switchPref2', toggle2.checked = null)
+                localStorage.setItem('timezonePref', timeZone.selected = null)
             }
         }); 
 
