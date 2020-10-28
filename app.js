@@ -108,7 +108,8 @@ searchInput.addEventListener('input', function(){
     }); 
 
     suggestions.forEach(function(suggested) {
-        const div = document.createElement('div'); 
+        const div = document.createElement('div');
+        div.setAttribute('id', 'autocomplete-list') ;
         div.innerHTML = suggested.name; 
         suggestionsPanel.appendChild(div); 
     }); 
@@ -127,11 +128,37 @@ searchInput.addEventListener('input', function(){
         })
     }
     
+    /*execute a function presses a key on the keyboard:*/
+    searchInput.addEventListener("keydown", function(e) {
+        var currentFocus;
+        var x = document.getElementById( "autocomplete-list");
+        if (x) x = x.getElementsByTagName("div");
+        if (e.keyCode == 40) {
+        /*If the arrow DOWN key is pressed,
+        increase the currentFocus variable:*/
+        currentFocus++;
+        /*and and make the current item more visible:*/
+        addActive(x);
+        } else if (e.keyCode == 38) { //up
+        /*If the arrow UP key is pressed,
+        decrease the currentFocus variable:*/
+        currentFocus--;
+        /*and and make the current item more visible:*/
+        addActive(x);
+        } else if (e.keyCode == 13) {
+        /*If the ENTER key is pressed, prevent the form from being submitted,*/
+        e.preventDefault();
+        if (currentFocus > -1) {
+            /*and simulate a click on the "active" item:*/
+            if (x) x[currentFocus].click();
+        }
+    }
+});
 })
 
 
 
-  
+
 //LOCAL STORAGE
 
 const toggle1 = document.getElementById('myonoffswitch'); 
@@ -142,7 +169,7 @@ const timeZone = document.getElementById('timezone');
     //Create const for saved values
     const switchPref1 = localStorage.getItem('switchPref1'); 
     const switchPref2 = localStorage.getItem('switchPref2'); 
-    const timeZonePref = localStorage.getItem('timeZonePref')
+    
 
     //Set value of ID basd on saved profile settings
     const loadSettings = function() {
@@ -152,9 +179,9 @@ const timeZone = document.getElementById('timezone');
         if (switchPref2 !== null) {
             toggle2.checked = (switchPref2 === 'true'); 
         }
-        if (timeZonePref !== null) {
-            timeZone.selected = (timeZonePref === 'true');
-        }
+        const timeZonePref = localStorage.getItem('timeZonePref')
+        timeZone.selectedIndex = localStorage.getItem('timeZonePref');
+        
     }
 
 
@@ -175,11 +202,16 @@ const timeZone = document.getElementById('timezone');
     if(testStorage() === true) {
         // Save settings to local storage when save button pushed
         document.getElementById('save').addEventListener('click', function() {
-            localStorage.setItem('switchPref1', toggle1.checked); 
-            localStorage.setItem('switchPref2', toggle2.checked); 
-            localStorage.setItem('timeZonePref', timeZone.selected)
-            alert('Settings successfully saved!'); 
-        }); 
+            if (timeZone.selectedIndex === 0) {
+                alert("Select a Timezone");
+            } else {
+             
+                localStorage.setItem('switchPref1', toggle1.checked); 
+                localStorage.setItem('switchPref2', toggle2.checked); 
+                localStorage.setItem('timeZonePref', timeZone.selectedIndex)
+                alert('Settings successfully saved!'); 
+            }
+        });
         // Send all settings back to default values when cancel pushed
         document.getElementById('cancel').addEventListener('click', function(){
             const cancel = confirm('Are you sure you want to cancel changes?'); 
@@ -187,7 +219,8 @@ const timeZone = document.getElementById('timezone');
             if (cancel) {
                 localStorage.setItem('switchPref1', toggle1.checked = null)
                 localStorage.setItem('switchPref2', toggle2.checked = null)
-                localStorage.setItem('timezonePref', timeZone.selected = null)
+                localStorage.setItem('timeZonePref', timeZone.selectedIndex = 0 );
+                
             }
         }); 
 
