@@ -101,15 +101,15 @@ const searchInput = document.querySelector('.form-field');
 const suggestionsPanel = document.querySelector('.suggestions'); 
 
 searchInput.addEventListener('keyup', function(){
-    const input = searchInput.value; 
+    const input = searchInput.value.toLowerCase(); 
     suggestionsPanel.innerHTML = ''; 
     const suggestions = usersNames.filter(function(usersName){
-        return usersName.name.toLowerCase().startsWith(input); 
+        return usersName.name.toLowerCase().includes(input); 
     }); 
 
     suggestions.forEach(function(suggested) {
         const div = document.createElement('div'); 
-        div.innerHTML = suggestioned.name; 
+        div.innerHTML = suggested.name; 
         suggestionsPanel.appendChild(div); 
     }); 
     if(input == '') {
@@ -117,11 +117,66 @@ searchInput.addEventListener('keyup', function(){
     }
 })
   
- 
+//LOCAL STORAGE
+
+const toggle1 = document.getElementById('myonoffswitch'); 
+const toggle2 = document.getElementById('myonoffswitch2'); 
+const timeZone = document.getElementById('timezone'); 
+
+    //Create const for saved values
+    const switchPref1 = localStorage.getItem('switchPref1'); 
+    const switchPref2 = localStorage.getItem('switchPref2'); 
+    const timeZonePref = localStorage.getItem('timeZonePref'); 
+
+    //Set value of ID basd on saved profile settings
+    const loadSettings = function() {
+        if (switchPref1 !== null) {
+            toggle1.checked = (switchPref1 === 'true'); 
+        }
+        if (switchPref2 !== null) {
+            toggle2.checked = (switchPref2 === 'true'); 
+        }
+        if (timeZonePref !== null) {
+            timeZone.value = (timeZonePref)
+        }
+    }
 
 
+    // Check if localStorage is available
 
+    function testStorage() {
+        const test = 'test'; 
+        try {
+            localStorage.setItem(test, test); 
+            localStorage.removeItem(test); 
+            return true; 
+        }   catch(e) {
+            return false; 
+        }
+    }
+  
+    // Runs function if localStorage is enabled
+    if(testStorage() === true) {
+        // Save settings to local storage when save button pushed
+        document.getElementById('save').addEventListener('click', function() {
+            localStorage.setItem('switchPref1', toggle1.checked); 
+            localStorage.setItem('switchPref2', toggle2.checked); 
+            alert('Settings successfully saved!'); 
+        }); 
+        // Send all settings back to default values when cancel pushed
+        document.getElementById('cancel').addEventListener('click', function(){
+            const cancel = confirm('Are you sure you want to cancel changes?'); 
 
+            if (cancel) {
+                localStorage.setItem('switchPref1', toggle1.checked = null)
+                localStorage.setItem('switchPref2', toggle2.checked = null)
+            }
+        }); 
+
+        // Run function to load correct settings
+         loadSettings();
+
+    }
 
 
    
