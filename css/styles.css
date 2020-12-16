@@ -519,7 +519,7 @@ nav a {
   padding-bottom: 17px;
   margin-top: 0;
   margin-bottom: 0;
-  flex-grow: 10;
+  flex-grow: 1;
   background-color: silver;
   padding-right: 10px;
 }
@@ -528,7 +528,6 @@ nav a {
   align-items: center;
   justify-content: space-between;
   background-color: #fff;
-  width: 250px;
   border: 1px solid silver;
   border-radius: 3px;
   float: right;
