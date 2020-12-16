@@ -430,7 +430,7 @@ header {
 
 .header-right {
   display: flex;
-  flex-basis: 25%;
+  flex-basis: 40%;
   max-width: 200px;
 }
 
