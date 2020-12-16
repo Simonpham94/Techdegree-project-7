@@ -434,7 +434,7 @@ header {
   max-width: 200px;
 }
 
-h2 {
+.header-container h2 {
   flex-basis: 70%;
   margin-left: 5px;
   max-width: 145px;
@@ -508,7 +508,7 @@ nav a {
   margin-bottom: 0;
   padding-left: 8px;
   margin-right: 4px;
-  font-size: 1.6em;
+  font-size: 1.6rem;
 }
 
 .main-header-search {
