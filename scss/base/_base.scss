@@ -89,9 +89,15 @@ header{
     justify-content: space-between;
     background-color: #7477BF;
     color: #fff;  
-    h3{
-         
-        flex-basis: 30%;
+    h2{
+         flex-basis: 40%;
+         margin-left: 5px; 
+         max-width: 100px;
+         font-size: 1.2rem;
+     }
+
+     .header-right{
+        display: flex;   
     } 
 }
 
@@ -99,19 +105,9 @@ header{
     border-right: 1px solid black; 
 }
 
-.header-right{
-    display: flex; 
-    flex-basis: 40%; 
-    max-width: 200px;  
-} 
 
-.header-container {
-    h2{
-        flex-basis: 70%; 
-         margin-left: 5px; 
-         max-width: 145px;
-     }
-}
+
+
 
 
 #icon-bell{

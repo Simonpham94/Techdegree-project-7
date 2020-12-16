@@ -420,24 +420,18 @@ header {
   background-color: #7477BF;
   color: #fff;
 }
-.header-container h3 {
-  flex-basis: 30%;
+.header-container h2 {
+  flex-basis: 40%;
+  margin-left: 5px;
+  max-width: 100px;
+  font-size: 1.2rem;
+}
+.header-container .header-right {
+  display: flex;
 }
 
 .empty {
   border-right: 1px solid black;
-}
-
-.header-right {
-  display: flex;
-  flex-basis: 40%;
-  max-width: 200px;
-}
-
-.header-container h2 {
-  flex-basis: 70%;
-  margin-left: 5px;
-  max-width: 145px;
 }
 
 #icon-bell {
