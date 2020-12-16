@@ -90,7 +90,8 @@ header{
     background-color: #7477BF;
     color: #fff;  
     h3{
-        min-width: 100px; 
+        // min-width: 100px; 
+        flex-basis: 30%;
     } 
 }
 

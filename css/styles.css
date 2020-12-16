@@ -421,7 +421,7 @@ header {
   color: #fff;
 }
 .header-container h3 {
-  min-width: 100px;
+  flex-basis: 30%;
 }
 
 .empty {
