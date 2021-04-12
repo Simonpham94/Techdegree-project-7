@@ -431,6 +431,7 @@ header {
 .header-container .header-right {
   display: flex;
   justify-content: flex-end;
+  max-height: 60px;
 }
 
 .empty {
