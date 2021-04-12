@@ -86,7 +86,7 @@ header {
   align-items: center;
   background-color: #7477bf;
   color: #fff;
-  height: 50px;
+  height: 60px;
   h2 {
     margin-left: 5px;
     max-width: 100px;
@@ -96,6 +96,7 @@ header {
   .header-right {
     display: flex;
     justify-content: flex-end;
+    // max-height: 40px;
   }
 }
 
